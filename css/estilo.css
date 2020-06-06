@@ -4,11 +4,11 @@
 /*SETTINGS!!!!!!*/
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 3.7vw;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.8vw;
   font-family: "Roboto", sans-serif;
 }
 
@@ -173,6 +173,9 @@ body {
     padding: 0;
     width: 100%;
   }
+  .container {
+    width: 100%;
+  }
   .frase {
     width: 100%;
     text-align: center;
@@ -181,17 +184,37 @@ body {
             justify-content: center;
   }
   .frase h1 {
+    font-size: 9vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .frase p {
+    font-size: 6vw;
+  }
+  .btn {
+    width: 90%;
   }
   .cliente {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu p {
     display: none;
+  }
+  .menu .fas {
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
 }
 /*# sourceMappingURL=estilo.css.map */
