@@ -13,10 +13,14 @@ p {
 }
 
 body {
-  background-color: #FDF5D0;
   padding-left: 100px;
   padding-right: 150px;
   background-image: url(../midia/back.png);
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -33,28 +37,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
+  height: 56px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 56px;
-  overflow: hidden;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  /*Cadastro engenheiros*/
 }
 
-.menu .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.menu .logo h1 {
+.menu h1 {
   color: #2A1570;
-  padding-left: 15px;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 .menu .cadastro {
@@ -76,8 +69,14 @@ body {
   color: #fcbf31;
   padding-top: 25px;
   margin-right: 10px;
+  font-size: 1.5em;
 }
 
+.menu .cadastro .fas:hover {
+  color: #2A1570;
+}
+
+/*CONTENT TEXT AND BUTTON*/
 #corpo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +90,7 @@ body {
           justify-content: space-between;
 }
 
+/*Keyframe*/
 .eng {
   position: absolute;
   top: 20%;
@@ -100,7 +100,7 @@ body {
           animation: engrenagem 5s ease 0s infinite alternate none;
 }
 
-/*CONTENT TEXT AND BUTTON*/
+/*Left article*/
 .frase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,6 +146,117 @@ body {
   top: 2px;
 }
 
+/*Cadastro clientes*/
+.containercad {
+  background-image: url(../midia/fundocad.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #E0E0E0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
+  border: 1px solid #2A1570;
+  /*Inputs!!!*/
+}
+
+.containercad .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containercad .title {
+  text-align: center;
+  color: #fcbf31;
+}
+
+.containercad .foto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40%;
+}
+
+.containercad .foto input {
+  font-size: 1em;
+  border: none;
+  background-color: none;
+}
+
+.containercad .foto img {
+  width: 100%;
+}
+
+.containercad .forms {
+  width: 100%;
+  text-align: center;
+}
+
+.containercad label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #2A1570;
+}
+
+.containercad label .ic {
+  padding-right: 20px;
+  font-size: 25px;
+}
+
+.containercad input, .containercad select {
+  width: 80%;
+  height: 35px;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-size: 1.3em;
+  border-radius: 1px;
+  border-left: solid 4px #2A1570;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #2A1570;
+  border-top: none;
+  border-right: none;
+}
+
+.containercad input:hover, .containercad select:hover {
+  border: #2A1570 solid 1px;
+  border-left: solid 4px #2A1570;
+}
+
+.containercad input:focus, .containercad select:focus {
+  background-color: white;
+  border: #2A1570 solid 1px;
+  border-left: solid 4px #2A1570;
+}
+
+.containercad #resumo {
+  padding-bottom: 200px;
+}
+
+/**KEyframe engrenagem-----------*/
 @-webkit-keyframes engrenagem {
   0.0% {
   }
@@ -156,7 +267,6 @@ body {
             transform: rotate(120);
   }
 }
-
 @keyframes engrenagem {
   0.0% {
   }
@@ -168,6 +278,7 @@ body {
   }
 }
 
+/*Media Querye ---------------------------*/
 @media (max-width: 1080px) {
   body {
     padding: 0;
@@ -215,6 +326,9 @@ body {
   .menu .fas {
     -webkit-transform: scale(2);
             transform: scale(2);
+  }
+  .containercad {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

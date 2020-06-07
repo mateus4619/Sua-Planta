@@ -6,11 +6,7 @@
     <title>Sua Planta</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
-    <script>
-        function mostra(){
-            var bt= document.getElementsByClassName(btn)
-        }
-    </script>
+    
 </head>
 <body>
     <div class="container">
@@ -18,8 +14,9 @@
     <div class="menu">
         <div class="logo">
             <img src="midia/logo.png" alt="Logo Sua planta">
-                <h1>Sua Planta</h1>
             </div>
+            <h1>Sua Planta</h1>
+            <!-- Cadastro -->
             <div class="cadastro">
                 <i class="fas fa-plus-square"></i><a href="#"><p>Entre como engenheiro</p>
                 </a>
@@ -36,8 +33,72 @@
         <div class="eng"><i class="fas fa-cogs"></i></div>
         <div class="cliente">
         <img src="midia/clientes.png" alt="Clientes e engenheiro" >
-    </div>
-</section>
+    </div></section>
 </div>
+    <!-- Área de casdastro -->
+    <div class="containercad">
+        <div class="title"><h1>CADASTRO ENGENHEIRO</h1></div>
+        <div class="content">
+        <!-- Foto Perfil -->
+        <div class="foto">
+            <div class="ftperfil">
+                <img src="midia/perfil.jpg" alt="foto perfil">
+            </div> <input type="file"accept="image/png, image/jpeg">
+        </div>
+            <!-- Formulários -->
+            <div class="forms">
+
+                <form name="cadastro-engenheiro" id="engcad">
+                    <!-- Nome  -->
+                    <label><i class="fas fa-hard-hat ic"></i><input type="text" id="nome" placeholder="Nome Completo"></label>
+                    <!-- E-MAIL -->
+                    <label><i class="fas fa-envelope-square ic"></i><input type="email"id="email" placeholder="E-mail"></label>
+                    <!-- Telefone -->
+                    <label><i class="fas fa-phone-alt ic"></i><input type="tel"id="fone" placeholder="Telefone"></label>
+                    <!-- ESTADO -->
+                    <label><i class="fas fa-map-marker-alt ic"></i><select name="estados-brasil" aria-placeholder="Estado">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select></label>
+                    <!-- Area de atuação -->
+                    <label><i class="fas fa-wrench ic"></i><select name="Atuacao" id="prof" aria-placeholder="Área de Atuação">
+                        <option value="civ">Engenharia Civil</option>
+                        <option value="mec">Engenharia Mecânica</option>
+                        <option value="ele">Engenharia Elétrica</option>
+                        <option value="prod">Engenharia de Produção</option>
+                        <option value="amb">Engenharia Ambiental</option>
+                    </select></label>
+                    <!-- resumo -->
+                    <label><i class="fas fa-align-right ic"></i><input type="text"id="resumo" placeholder="Resumo Profissional"></label>
+                </form>
+            </div>
+       </div> 
+    </div>
+
 </body>
 </html>

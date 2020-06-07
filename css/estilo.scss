@@ -15,10 +15,14 @@ p{
     font-family: $fonte1;
 }
 body{
-    background-color: #FDF5D0;
+    
     padding-left: 100px;
     padding-right: 150px;
     background-image: url(../midia/back.png);
+}
+img{
+    width: 100%;
+    height: 100%;
 }
 .container{
     display: flex;
@@ -28,20 +32,14 @@ body{
 /*NAV MENU SUPERIOR*/
 .menu{
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
     height: 56px;
-    overflow: hidden;
-    align-content: center;
-    .logo{
-        display: flex;    
-        h1{
-            color: $cor2;
-            padding-left: 15px;
-            font-size: 1.8em;
-        }
-    }    
+    justify-content: space-between;
+    h1{
+        color: $cor2;
+        font-size: 1.5em;
+    }
+    /*Cadastro engenheiros*/
     .cadastro{
         display: flex;
         a{
@@ -55,9 +53,14 @@ body{
             color: $cor1;
             padding-top: 25px;
             margin-right: 10px;
+            font-size:1.5em;
+            &:hover{
+            color: $cor2;
+            }
         }
     }
 }
+/*CONTENT TEXT AND BUTTON*/
 #corpo{
     display: flex;
     flex-wrap: wrap;
@@ -65,6 +68,7 @@ body{
     width: 100%;
     justify-content: space-between;
 }
+/*Keyframe*/
 .eng{
     position: absolute;
     top: 20%;
@@ -72,7 +76,7 @@ body{
     font-size: 30px;
     animation: engrenagem 5s ease 0s infinite alternate none;
 }
-/*CONTENT TEXT AND BUTTON*/
+/*Left article*/
 .frase{
     display: flex;
     text-align: left;
@@ -108,6 +112,85 @@ body{
 	top:2px;
     }
 }
+/*Cadastro clientes*/
+.containercad{
+    background-image: url(../midia/fundocad.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #E0E0E0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    border-radius: 25px;
+    border-top-left-radius: 0px;
+    border: 1px solid $cor2;
+.content{
+    display: flex;
+    flex-direction: row;
+}
+    .title{
+        text-align: center;
+        color: $cor1;
+    }
+.foto{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40%;
+    input{
+        font-size: 1em;
+        border: none;
+        background-color: none;
+    }
+    img{
+        width: 100%;
+    }
+}
+/*Inputs!!!*/
+.forms{
+    width: 100%;
+    text-align: center;
+}
+label{
+    align-items: center;
+    display: flex;
+    color: $cor2;
+    .ic{
+        padding-right: 20px;
+        font-size: 25px;
+    }
+}
+input, select{
+    width: 80%;
+    height: 35px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    border-radius: 1px;
+    border-left: solid 4px $cor2;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    color: $cor2;
+    border-top: none;
+    border-right: none;
+    &:hover{
+        border: $cor2 solid 1px;
+        border-left: solid 4px $cor2;
+    }
+    &:focus{
+        background-color: white;
+        border: $cor2 solid 1px;
+        border-left: solid 4px $cor2;
+    }
+}
+#resumo{
+    padding-bottom: 200px;
+}
+}
+/**KEyframe engrenagem-----------*/
 @keyframes engrenagem {
     0.0%{
        
@@ -117,6 +200,7 @@ body{
         transform: rotate(120);
     }
 }
+/*Media Querye ---------------------------*/
 @media (max-width: 1080px){
     body{
         padding: 0;
@@ -154,4 +238,7 @@ body{
             transform: scale(2);
         }
     }
+    .containercad{
+        width: 95%;
+}
 }
